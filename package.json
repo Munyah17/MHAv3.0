@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "npm run dev --prefix Mutapa-Heritage-Awards",
-    "build": "npm run build --prefix Mutapa-Heritage-Awards",
+    "build": "npm install --prefix Mutapa-Heritage-Awards && npm run build --prefix Mutapa-Heritage-Awards",
     "start": "npm run start --prefix Mutapa-Heritage-Awards",
     "lint": "npm run lint --prefix Mutapa-Heritage-Awards"
   }
