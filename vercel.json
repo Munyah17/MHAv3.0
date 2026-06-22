@@ -1,6 +1,5 @@
 {
   "framework": "nextjs",
-  "installCommand": "npm install --prefix Mutapa-Heritage-Awards",
-  "buildCommand": "npm run build --prefix Mutapa-Heritage-Awards",
-  "outputDirectory": "Mutapa-Heritage-Awards/.next"
+  "installCommand": "npm install",
+  "buildCommand": "npm run build"
 }
