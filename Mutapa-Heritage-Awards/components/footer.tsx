@@ -167,7 +167,7 @@ export function Footer() {
               &copy; {new Date().getFullYear()} Mutapa Heritage Awards. All rights reserved.
             </p>
             <p className="text-muted-foreground text-xs text-center sm:text-right">
-              Developed by <a href="#" className="text-primary hover:underline">Aeigis Technology Pvt Ltd</a> T/A Mufasa Gadgets. Munyah Griezmann +263773 909 307
+              Developed by <a href="#" className="text-primary hover:underline">Global Space Web</a> +263773 909 307
             </p>
           </div>
         </div>
