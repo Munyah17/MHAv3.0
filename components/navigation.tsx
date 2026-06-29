@@ -53,9 +53,22 @@ export function Navigation() {
         )}
       >
         <nav className="container mx-auto px-4 sm:px-8 lg:px-16">
-          <div className="flex items-center justify-between h-14 lg:h-20 relative">
-            {/* Desktop Navigation - Left */}
-            <div className="hidden lg:flex items-center gap-1">
+          <div className="flex items-center h-14 lg:h-20">
+            {/* Logo - Left */}
+            <Link href="/" className="flex items-center shrink-0 mr-6 lg:mr-10" onClick={() => setIsOpen(false)}>
+              <Image
+                src="/images/logo.png"
+                alt="Munhumutapa Heritage Awards"
+                width={160}
+                height={64}
+                className="object-contain"
+                style={{ maxHeight: "48px", width: "auto" }}
+                priority
+              />
+            </Link>
+
+            {/* Desktop Navigation - Right */}
+            <div className="hidden lg:flex items-center gap-1 ml-auto">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -70,40 +83,14 @@ export function Navigation() {
                   {link.label}
                 </Link>
               ))}
+              <div className="ml-4">
+                <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground animate-pulse-glow">
+                  <Link href="/nominations">Nominate Now</Link>
+                </Button>
+              </div>
             </div>
 
-            {/* Center Logo - Desktop */}
-            <Link href="/" className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2 z-10">
-              <Image
-                src="/images/logo-dark.png"
-                alt="Munhumutapa Heritage Awards"
-                width={180}
-                height={72}
-                className="object-contain"
-                style={{ maxHeight: "52px", width: "auto", mixBlendMode: "screen" }}
-                priority
-              />
-            </Link>
-
-            {/* CTA Button - Desktop */}
-            <div className="hidden lg:block">
-              <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground animate-pulse-glow">
-                <Link href="/nominations">Nominate Now</Link>
-              </Button>
-            </div>
-
-            {/* Mobile Logo */}
-            <Link href="/" className="lg:hidden flex items-center" onClick={() => setIsOpen(false)}>
-              <Image
-                src="/images/logo-dark.png"
-                alt="Munhumutapa Heritage Awards"
-                width={120}
-                height={48}
-                className="object-contain"
-                style={{ maxHeight: "38px", width: "auto", mixBlendMode: "screen" }}
-                priority
-              />
-            </Link>
+            {/* Mobile: spacer + hamburger */}
             <div className="flex-1 lg:hidden" />
             <button
               onClick={() => setIsOpen(!isOpen)}

@@ -39,12 +39,12 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center mb-4">
               <Image
-                src="/images/logo-dark.png"
+                src="/images/logo.png"
                 alt="Munhumutapa Heritage Awards"
                 width={200}
                 height={80}
                 className="object-contain"
-                style={{ maxHeight: "70px", width: "auto", mixBlendMode: "screen" }}
+                style={{ maxHeight: "70px", width: "auto" }}
               />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">

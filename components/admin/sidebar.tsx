@@ -71,7 +71,7 @@ export function AdminSidebar({ user }: { user: User }) {
           <div className="p-6 border-b border-stone-800">
             <Link href="/admin" onClick={() => setIsOpen(false)}>
               <Image
-                src="/images/logo-light.png"
+                src="/images/logo.png"
                 alt="Munhumutapa Heritage Awards"
                 width={150}
                 height={60}

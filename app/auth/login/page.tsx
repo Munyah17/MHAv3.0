@@ -43,7 +43,7 @@ export default function LoginPage() {
         <div className="text-center mb-8">
           <Link href="/">
             <Image
-              src="/images/logo-light.png"
+              src="/images/logo.png"
               alt="Munhumutapa Heritage Awards"
               width={180}
               height={80}
