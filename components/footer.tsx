@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -36,14 +37,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <span className="font-serif text-xl font-bold text-primary-foreground">M</span>
-              </div>
-              <div>
-                <span className="font-serif text-base sm:text-lg font-bold text-foreground whitespace-nowrap">Munhumutapa</span>
-                <span className="block text-xs text-primary tracking-wide">Heritage Awards</span>
-              </div>
+            <Link href="/" className="flex items-center mb-4">
+              <Image
+                src="/images/logo-dark.png"
+                alt="Munhumutapa Heritage Awards"
+                width={200}
+                height={80}
+                className="object-contain"
+                style={{ maxHeight: "70px", width: "auto", mixBlendMode: "screen" }}
+              />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               A premier cultural institution dedicated to the preservation and celebration of Zimbabwe&apos;s heritage through the Munhumutapa Heritage Awards. Building our nation brick by brick.

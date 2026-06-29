@@ -15,7 +15,6 @@ import { Award, Clock, CheckCircle, ArrowRight, CheckCircle2 } from "lucide-reac
 import { createClient } from "@/lib/supabase/client"
 
 const categories = [
-  { value: "cultural-stewardship", label: "The Munhumutapa Grand Honour for Cultural Stewardship" },
   { value: "culinary-heritage", label: "The Mubikira Award — Culinary Heritage" },
   { value: "linguistic-excellence", label: "The Hwando Award — Linguistic Excellence" },
   { value: "performing-arts", label: "The Mbira Award — Performing Arts" },

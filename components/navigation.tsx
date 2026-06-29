@@ -5,6 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
@@ -52,8 +53,8 @@ export function Navigation() {
         )}
       >
         <nav className="container mx-auto px-4 sm:px-8 lg:px-16">
-          <div className="flex items-center justify-between h-14 lg:h-20">
-            {/* Desktop Navigation */}
+          <div className="flex items-center justify-between h-14 lg:h-20 relative">
+            {/* Desktop Navigation - Left */}
             <div className="hidden lg:flex items-center gap-1">
               {navLinks.map((link) => (
                 <Link
@@ -71,6 +72,19 @@ export function Navigation() {
               ))}
             </div>
 
+            {/* Center Logo - Desktop */}
+            <Link href="/" className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2 z-10">
+              <Image
+                src="/images/logo-dark.png"
+                alt="Munhumutapa Heritage Awards"
+                width={180}
+                height={72}
+                className="object-contain"
+                style={{ maxHeight: "52px", width: "auto", mixBlendMode: "screen" }}
+                priority
+              />
+            </Link>
+
             {/* CTA Button - Desktop */}
             <div className="hidden lg:block">
               <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground animate-pulse-glow">
@@ -79,14 +93,16 @@ export function Navigation() {
             </div>
 
             {/* Mobile Logo */}
-            <Link href="/" className="lg:hidden flex items-center gap-2 min-w-0" onClick={() => setIsOpen(false)}>
-              <div className="w-8 h-8 rounded-full bg-primary/90 flex items-center justify-center shrink-0">
-                <span className="font-serif text-sm font-bold text-primary-foreground">M</span>
-              </div>
-              <div className="leading-none min-w-0">
-                <span className="font-serif text-xs font-bold text-foreground block">Munhumutapa</span>
-                <span className="text-[9px] text-primary tracking-wide block">Heritage Awards</span>
-              </div>
+            <Link href="/" className="lg:hidden flex items-center" onClick={() => setIsOpen(false)}>
+              <Image
+                src="/images/logo-dark.png"
+                alt="Munhumutapa Heritage Awards"
+                width={120}
+                height={48}
+                className="object-contain"
+                style={{ maxHeight: "38px", width: "auto", mixBlendMode: "screen" }}
+                priority
+              />
             </Link>
             <div className="flex-1 lg:hidden" />
             <button

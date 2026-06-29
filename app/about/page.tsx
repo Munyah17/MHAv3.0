@@ -114,10 +114,6 @@ export default function AboutPage() {
                   To identify, celebrate, and empower the individuals, organizations, and communities
                   who are actively preserving, promoting, and innovating Zimbabwe&apos;s rich cultural heritage.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  We believe that by shining a light on these cultural guardians, we inspire others
-                  to join the movement and ensure our traditions thrive for generations to come.
-                </p>
               </motion.div>
 
               <motion.div
